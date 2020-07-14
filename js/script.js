@@ -40,7 +40,7 @@ var elemento2 = "";
 
 for (var i = 1; i <= 100; i++) {
   // if ESTERNO verifica se è multiplo DI UNO DEI DUE numeri dati
-  if (i % 3 == 0 && i % 5 == 0) {
+  if (i % 3 == 0 || i % 5 == 0) {
     // if annidato - se MULTIPLO SOLO di 3
     if (i % 3 == 0 && i % 5 != 0) {
       elemento2 += "<ul>Fizz</ul>";
@@ -49,7 +49,7 @@ for (var i = 1; i <= 100; i++) {
     if (i % 3 != 0 && i % 5 == 0) {
       elemento2 += "<ul>Buzz</ul>";
       // if annidato - allora multiplo ENTRAMBI
-    } else {
+    } else if (i % 3 == 0 && i % 5 == 0) {
       elemento2 += "<ul>FizzBuzz</ul>";
     }
     //   se nn entra nel PRIMO IF vuol dire che non è multiplo di NESSUNO DEI DUE
